@@ -2,9 +2,9 @@
 
 Hi, I am Supriyo Mondal
 
-Skills :  Python
-          Data Structure
-          C Programming
+Skills :  Python,
+          Data Structure,
+          C Programming,
 
 Projects : 
 
