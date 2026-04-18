@@ -1,43 +1,25 @@
-import turtle
-import time
-
-screen = turtle.Screen()
-screen.bgcolor("black")
-screen.title("💔 Breaking Heart in the middle")
-
-pen = turtle.Turtle()
-pen.color("pink")
-pen.pensize(3)
-pen.speed(5)
-
-def draw_heart():
-    pen.begin_fill()
-    pen.fillcolor("pink")
-    pen.left(140)
-    pen.forward(180)
-    pen.circle(-90, 200)
-    pen.left(120)
-    pen.circle(-90, 200)
-    pen.forward(180)
-    pen.end_fill()
-
-draw_heart()
-time.sleep(1)
-
-pen.penup()
-pen.goto(0, 150)
-pen.pendown()
-pen.color("black")
-pen.pensize(4)
-
-pen.right(400)
-pen.forward(40)
-pen.left(30)
-pen.forward(25)
-pen.right(30)
-pen.forward(30)
-pen.left(35)
-pen.forward(40)
-
-pen.hideturtle()
-turtle.done()
+from turtle import*
+from colorsys import*
+tracer(10)
+bgcolor("black")
+pensize(1)
+h=0
+goto(0, 20)
+def draw(ang, n):
+    circle(5+n, 60)
+    left(ang)
+    circle(5+n*2, 60)
+for i in range(200):
+    color(hsv_to_rgb(h, 1, 1))
+    h+= 0.0062
+    up()
+    draw(90, i)
+    draw(180,0)
+    down()
+    draw(1/2, 0)
+    draw(180, i/2)
+    draw(120, 0)
+    draw(1/2, 0)
+    draw(120, 0)
+hideturtle()
+done()
